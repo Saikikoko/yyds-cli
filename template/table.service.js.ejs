@@ -1,0 +1,31 @@
+import Vue from 'vue';
+
+import { apiUrl } from '@/config/constant';
+
+class <%= name %>Service {
+  static list(params) {
+    return Vue.http.get(`${apiUrl}/list`, { params });
+  }
+
+  static count(params) {
+    return Vue.http.get(`${apiUrl}/count`, { params });
+  }
+
+  static store(params) {
+    return Vue.http.post(`${apiUrl}/store`, params);
+  }
+
+  static update(params) {
+    return Vue.http.patch(`${apiUrl}/update`, params);
+  }
+
+  static print(data) {
+    return Vue.http.post(`${apiUrl}/print`, data, { responseType: 'blob' });
+  }
+
+  destroy(body) {
+    return Vue.http.delete(`${this.api}/destroy`, {body});
+  }
+}
+
+export default <%= name %>Service;

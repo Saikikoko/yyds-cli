@@ -1,0 +1,17 @@
+import {deepClone} from '@/config';
+import {ReportModel} from '@/models/report/report.model';
+
+export class <%= name %>Model extends ReportModel {
+  constructor(data = {}) {
+    if (!data) data = {};
+    super(data);
+    data = deepClone(data);
+    this.content = new <%= name %>Content(data.content);
+  }
+}
+
+export class <%= name %>Content {
+  constructor(data = {}) {
+    if (!data) data = {};
+  }
+}
