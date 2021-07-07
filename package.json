@@ -1,6 +1,6 @@
 {
   "name": "yyds-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "简易脚手架工具",
   "main": "index.js",
   "bin": {

@@ -10,7 +10,7 @@
 #### 快速安装与使用
 
 ~~~shell
-npm i -D yyds-cli
+npm i -g yyds-cli
 ~~~
 
 #### 查看脚手架版本号
